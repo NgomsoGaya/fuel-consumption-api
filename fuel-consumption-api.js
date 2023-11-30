@@ -39,7 +39,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
     async function refuel(req, res) {
         
         const { vehicleId, liters, amount, distance, filledUp } = req.body;
-        console.log(req.body);
+        // console.log(req.body);
         
         const status = await fuelConsumption.refuel(vehicleId, liters, amount, distance, filledUp)
 

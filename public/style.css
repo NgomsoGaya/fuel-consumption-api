@@ -91,7 +91,22 @@
 
   .center-container a {
     display: inline-block;
-    /* Add additional styling if needed */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+  }
+
+  button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff1e;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
   }
  
 .car-container {

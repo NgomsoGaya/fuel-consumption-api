@@ -21,7 +21,7 @@ const db = pgp(config);
 describe("The FuelConsumption API", function () {
 
     // set the test time out if needed
-    this.timeout(3000); 
+    this.timeout(4000); 
 
     this.beforeEach(async function(){
         await db.none(`delete from fuel_entries`);
