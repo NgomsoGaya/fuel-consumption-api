@@ -1,6 +1,9 @@
 # Fuel consumption API
 
 [![Node.js CI](https://github.com/NgomsoGaya/fuel-consumption-api/actions/workflows/node.js.yml/badge.svg)](https://github.com/NgomsoGaya/fuel-consumption-api/actions/workflows/node.js.yml)
+![20231130_104049_720](https://github.com/NgomsoGaya/fuel-consumption-api/assets/125261321/b4f56e14-0db0-471b-b305-127bc8e0de86)
+![20231130_104055_720](https://github.com/NgomsoGaya/fuel-consumption-api/assets/125261321/9913b912-1ff0-4291-9841-84d240703201)
+
 
 The fuel consumption API keeps track of vehicle fuel usage.
 
