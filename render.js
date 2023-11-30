@@ -5,41 +5,43 @@ const api = FuelConsumptionAPI()
 
 export default function renderData() {
     
+    //write a function that will render all cars
     async function allCars(req, res, next) {
+
+        // call the API end-point to read the json
       const response = await axios.get("http://localhost:3000/api/vehicles");
 
+        // convert json into easily readable data
         let cars = response.data
         let clientcars = cars.data
 
+        // redner the data
         res.render("allcars", { clientcars });
     }
 
+    // create a function that renders the add cars page
     async function addVehicles(req, res, next) {
         res.render("addcars")
     }
 
+    // create a function that allows users to refuel cars
     async function refuelVehicles(req, res, next) {
-        const response = await axios.get("http://localhost:3000/api/vehicles");
+        // create an end-point for the API
 
-        let cars = response.data;
-        let clientcars = cars.data;
+      const response = await axios.get("http://localhost:3000/api/vehicles");
 
-        res.render("refuelcars", { clientcars });
+        // convert the data into a simpler data type
+      let cars = response.data;
+      let clientcars = cars.data;
+
+        // render the data
+      res.render("refuelcars", { clientcars });
     }
 
-    async function addCar(req, res, next) {
-        const response = await axios.get("http://localhost:3000/api/vehicle");
-
-        let data = response.data
-        if (data.status == "success") {
-            res.redirect("/addcars")
-        } 
-    }
 
     return {
       allCars,
       addVehicles,
       refuelVehicles,
-      addCar,
     };
 }

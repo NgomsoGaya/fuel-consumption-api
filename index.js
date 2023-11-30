@@ -1,9 +1,11 @@
+//import all the dependencies
 import pgPromise from 'pg-promise';
 import express from 'express';
 import exphbs from "express-handlebars";
 import "dotenv/config"
 import bodyParser from 'body-parser';
 
+//import all the functions
 import FuelConsumption from './fuel-consumption.js';
 import FuelConsumptionAPI from './fuel-consumption-api.js';
 import renderData from './render.js';
@@ -48,6 +50,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// add the routes to add screens and allow functionality
 app.get("/", renderdata.allCars);
 app.get('/addcars', renderdata.addVehicles)
 app.post('/addcars', fuelConsumptionAPI.addVehicle)

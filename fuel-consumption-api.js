@@ -8,6 +8,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
 
         const result = await fuelConsumption.addVehicle({ description, regNumber });
         
+        // instead of returning json, read the json and redirect on success
         if (result.status == "success") {
           res.redirect("/addcars");
         } 
@@ -42,6 +43,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         
         const status = await fuelConsumption.refuel(vehicleId, liters, amount, distance, filledUp)
 
+        // instead of sending json, redirect on success
         if (status.status == "success") {
           res.redirect("/refuel");
         } 
