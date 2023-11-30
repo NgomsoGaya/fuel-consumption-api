@@ -9,7 +9,9 @@ export default function renderData() {
     async function allCars(req, res, next) {
 
         // call the API end-point to read the json
-      const response = await axios.get("http://localhost:3000/api/vehicles");
+      const response = await axios.get(
+        "https://fuel-consumption-api-qwe2.onrender.com/api/vehicles"
+      );
 
         // convert json into easily readable data
         let cars = response.data
@@ -28,7 +30,9 @@ export default function renderData() {
     async function refuelVehicles(req, res, next) {
         // create an end-point for the API
 
-      const response = await axios.get("http://localhost:3000/api/vehicles");
+      const response = await axios.get(
+        "https://fuel-consumption-api-qwe2.onrender.com/api/vehicles"
+      );
 
         // convert the data into a simpler data type
       let cars = response.data;
