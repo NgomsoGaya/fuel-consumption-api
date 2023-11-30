@@ -4,7 +4,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
 
     async function addVehicle(req, res) {
         const {description, regNumber} = req.body;
-        console.log(req.body);
+        // console.log(req.body);
 
         const result = await fuelConsumption.addVehicle({ description, regNumber });
         
@@ -41,7 +41,11 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         console.log(req.body);
         
         const status = await fuelConsumption.refuel(vehicleId, liters, amount, distance, filledUp)
-        res.json(status);
+
+        if (status.status == "success") {
+          res.redirect("/refuel");
+        } 
+        // res.json(status);
 
     }
 

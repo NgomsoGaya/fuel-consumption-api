@@ -1,17 +1,21 @@
 <form action="/refuel" method="post">
 <h1>Refuel Vehicle</h1>
 
-VehicleId: <input type="text">
+VehicleId: <input type="text" name="vehicleId">
 <br>
-Litres: <input type="text">
+Litres: <input type="text" name="liters">
 <br>
-Amount Paid: <input type="text">
+Amount Paid: <input type="text" name="amount">
 <br>
-Distance: <input type="text">
+Distance: <input type="text" name="distance">
 
-<p>Filled Up</p>
-True<input type="radio" name="filledup" value="Yes">
-False<input type="radio" name="filledup" value="No">
+{{!-- <p>Filled Up</p>
+True<input type="radio" name="filledUp" value="Yes" required>
+in --}}
+<label for="brand">Filled Up:</label>
+      <select id="brand" name="filledUp">
+        <option value="True">True</option>
+      </select>
 <br>
 
 <button type="submit">Refuel</button>
@@ -20,4 +24,16 @@ False<input type="radio" name="filledup" value="No">
 
 <div class="center-container">
     <a href="/">Back To Home</a>
+</div>
+
+<div class="car-container">
+{{#each clientcars}}
+<div class="cars" data-car-id="{{this.id}}">
+          <div class="car-item-details">
+            <h3 name="carDescription">Description: {{this.description}}</h3>
+            <p>RegNo: {{this.reg_number}}</p>
+            <p>Id: {{this.id}}</p>
+          </div>
+        </div>
+{{/each}}
 </div>

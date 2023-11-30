@@ -93,3 +93,21 @@
     display: inline-block;
     /* Add additional styling if needed */
   }
+ 
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* You can adjust other styles as needed */
+  }
+
+  .cars {
+    width: 20%; /* Adjust the width as needed */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    box-sizing: border-box;
+  }

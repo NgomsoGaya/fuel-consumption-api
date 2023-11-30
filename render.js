@@ -19,7 +19,12 @@ export default function renderData() {
     }
 
     async function refuelVehicles(req, res, next) {
-        res.render("refuelcars")
+        const response = await axios.get("http://localhost:3000/api/vehicles");
+
+        let cars = response.data;
+        let clientcars = cars.data;
+
+        res.render("refuelcars", { clientcars });
     }
 
     async function addCar(req, res, next) {

@@ -52,7 +52,7 @@ app.get("/", renderdata.allCars);
 app.get('/addcars', renderdata.addVehicles)
 app.post('/addcars', fuelConsumptionAPI.addVehicle)
 app.get('/refuel', renderdata.refuelVehicles)
-app.post('/refuel')
+app.post("/refuel", fuelConsumptionAPI.refuel);
 
 app.get('/api/vehicles', fuelConsumptionAPI.vehicles);
 app.get('/api/vehicle', fuelConsumptionAPI.vehicle);
