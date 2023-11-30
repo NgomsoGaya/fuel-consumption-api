@@ -1,0 +1,26 @@
+
+<h1>Fuel Consumption App</h1>
+
+<h2>All Vehicles</h2>
+
+<div id="cars-container">
+    {{#each clientcars}}
+        <div class="cars-item" data-car-id="{{this.id}}">
+          <img src="../redcar.jpg" class="car-item-image">
+          <div class="car-item-details">
+            <h3 name="carDescription">Description: {{this.description}}</h3>
+            <p>RegistrationNo: {{this.reg_number}}</p>
+            <p>TotalDistance: {{this.total_distance}}</p>
+            <p>TotalFuelSpent: {{this.total_liters}}</p>
+            <p>TotalAmount: {{this.total_amount}}</p>
+            <p>FuelConsumption: {{this.fuel_consumption}}</p>
+          </div>
+        </div>
+    {{/each}}
+</div>
+
+<div class="center-container">
+  <a href="/addcars">Add More Vehicles</a>
+<br>
+<a href="/refuel">Refuel A Vehicle</a>
+</div>

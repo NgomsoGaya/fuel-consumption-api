@@ -6,8 +6,12 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         const {description, regNumber} = req.body;
         console.log(req.body);
 
-        const result  = await fuelConsumption.addVehicle({description, regNumber});
-        res.json(result);
+        const result = await fuelConsumption.addVehicle({ description, regNumber });
+        
+        if (result.status == "success") {
+          res.redirect("/addcars");
+        } 
+        // res.json(result);
     }
 
     async function vehicles(req, res) {
@@ -19,7 +23,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         });
 
     }
-
+    
     async function vehicle(req, res) {
 
         const {id} = req.query;

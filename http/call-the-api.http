@@ -2,7 +2,7 @@ GET http://localhost:3000/api/vehicles HTTP/1.1
 
 ###
 
-GET http://localhost:3000/api/vehicle?id=245 HTTP/1.1
+GET http://localhost:3000/api/vehicle?id=1 HTTP/1.1
 
 ###
 
@@ -10,8 +10,8 @@ POST http://localhost:3000/api/vehicle HTTP/1.1
 content-type: application/json
 
 {
-    "description": "sample vehicle",
-    "regNumber": "CAA 780-123"
+    "description": "toyota vehicle",
+    "regNumber": "CAA 790-133"
 }
 
 ###
@@ -19,7 +19,7 @@ POST http://localhost:3000/api/refuel HTTP/1.1
 content-type: application/json
 
 {
-    "vehicleId" : 245, 
+    "vehicleId" : 1, 
     "liters" : 30, 
     "amount" : 675, 
     "distance" :  56003, 
@@ -31,7 +31,7 @@ POST http://localhost:3000/api/refuel HTTP/1.1
 content-type: application/json
 
 {
-    "vehicleId" : 245, 
+    "vehicleId" : 1, 
     "liters" : 20, 
     "amount" : 475, 
     "distance" : 56423, 

@@ -137,5 +137,4 @@ export default function FuelConsumptionAPI(db) {
         vehicles,
         refuel
     }
-
 }
